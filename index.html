@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171326">
+  <title>Yume AI — Digital Twin</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">夢</div>
+        <div><strong>Yume AI</strong><small>Personal Digital Twin</small></div>
+      </div>
+      <button class="new-chat" id="newChat">＋ Cuộc trò chuyện mới</button>
+      <div class="sidebar-label">ABOUT YUME</div>
+      <div class="about-card">
+        <div class="avatar">Y</div>
+        <div><strong>Yume Chiyomi</strong><small>Virtual companion</small></div>
+      </div>
+      <div class="sidebar-note">
+        Một bản sao AI được xây dựng từ tính cách, kiến thức và những điều Yume đã chia sẻ.
+      </div>
+      <div class="sidebar-bottom">
+        <span class="status-dot"></span>
+        <span id="connectionStatus">Đang kiểm tra kết nối...</span>
+      </div>
+    </aside>
+
+    <section class="chat-panel">
+      <header class="topbar">
+        <div class="mobile-brand">✦ Yume AI</div>
+        <div class="model-label"><span class="status-dot"></span> Digital Twin V1</div>
+        <button class="icon-button" id="clearChat" title="Xóa lịch sử trên thiết bị" aria-label="Xóa lịch sử">⌫</button>
+      </header>
+
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="welcome-symbol">✧</div>
+          <p class="eyebrow">WELCOME TO MY DIGITAL WORLD</p>
+          <h1>Yume đang ở đây~</h1>
+          <p class="welcome-description">Một phiên bản AI của Yume Chiyomi. Hãy bắt đầu bằng bất cứ điều gì bạn muốn hỏi nhé!</p>
+          <div class="suggestions">
+            <button class="suggestion">Giới thiệu về Yume đi!</button>
+            <button class="suggestion">Bạn thích lập trình vì điều gì?</button>
+            <button class="suggestion">Kể về một dự án thú vị của bạn.</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="composer" id="chatForm">
+        <textarea id="messageInput" rows="1" maxlength="4000" placeholder="Nhắn tin cho Yume..." aria-label="Tin nhắn"></textarea>
+        <button class="send-button" id="sendButton" type="submit" aria-label="Gửi tin nhắn">➤</button>
+        <div class="composer-hint">Yume AI có thể mắc lỗi. Đây là bản sao AI, không phải người thật.</div>
+      </form>
+    </section>
+  </main>
+  <script src="./chat.js"></script>
+</body>
+</html>
